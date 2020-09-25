@@ -63,32 +63,59 @@
 .ex-6-img, .ex-7-img, .ex-8-img {
     width: 500px;
 }
-/* Es 7 */ /*NON MI FA VEDERE L'IMMAGINE, HO INSERITO LA STESSA DELLA N.6*/
+/* Es 7 */
 .ex-7-img:hover{
   filter: saturate(20%)sepia(50%);
   transition: 1s;
 }
 /* Es 8 */
-.ex-8-img{
-  
+.ex-8-img:hover{
+  filter: brightness(90%)contrast(50%);
+  border-radius: 18px;
+  transition: .5s;
 }
-
-
 /* Es 9 */
 .ex-9-img {
     margin: 50px 100px;
     width: 400px;
 }
+.ex-9-img:hover{
+  filter: grayscale(1)sepia(50%);
+  border-radius: 25px;
+  transform: scale(0.8);
+  transition: .5s;
+}
 /* Es 10 */
 .ex-10-icon {
     font-size: 60px;
+}
+.ex-10-icon {
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(1turn);
+    }
 }
 /* Es 11 */
 .ex-11-icon {
     font-size: 60px;
 }
-/* Es 12 */
-/* Es 13 */
+.ex-11-icon:hover {
+    animation: spinALittleBit 2s linear;
+}
+@keyframes spinALittleBit {
+    0% {
+        transform: rotate(0);
+    }
+    90% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+/* Es 12-13 */
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -118,3 +145,33 @@
     width: 60px;
     height: 20px;
 }
+/* Es 12 */
+.ex-12-button:hover .ex-12-top-white {
+    animation: moveTopWhite 2s linear;
+}
+@keyframes moveTopWhite {
+    0% {
+        left: 20%;
+    }
+    50% {
+        left: 40%;
+    }
+    100% {
+        left: 20%;
+    }
+}
+.ex-12-button:hover .ex-12-bottom-white {
+    animation: moveBottomWhite 2s linear;
+}
+@keyframes moveBottomWhite {
+    0% {
+        right: 20%;
+    }
+    50% {
+        right: 40%;
+    }
+    100% {
+        right: 20%;
+    }
+}
+/* Es 13 */
